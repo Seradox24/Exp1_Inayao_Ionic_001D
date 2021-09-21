@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-registro',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistroPage implements OnInit {
 
+  usuario = {
+    name: '',
+    telefono: '',
+    email:'',
+    password:'',
+  }
   constructor() { }
 
   ngOnInit() {
   }
+  onSubmit() {
+    console.log('submit');
+    console.log(this.usuario);
+  }
+
 
 }

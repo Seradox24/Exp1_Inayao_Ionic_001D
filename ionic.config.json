@@ -1,5 +1,7 @@
 {
   "name": "goTravel",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

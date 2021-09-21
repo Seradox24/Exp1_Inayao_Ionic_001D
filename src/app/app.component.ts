@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 
 interface Componente {
   icon: string;
@@ -12,12 +13,12 @@ interface Componente {
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  constructor(private menuCtrl:MenuController) {}
 
   componentes: Componente [] = [
     {
-      icon: 'bag-add-outline',
-      name: 'Servicios',
+      icon: 'compass-outline',
+      name: 'Destinos',
       redirectTo: '/servicios'
     },
     {
@@ -25,7 +26,9 @@ export class AppComponent {
       name: 'Registro',
       redirectTo: '/registro'
     },
-    
 
   ];
+  cerrarMenu(){
+    this.menuCtrl.close('first')
+  }
 }
